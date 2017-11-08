@@ -1,0 +1,9 @@
+{
+  "name": "palomaseriesclient",
+  "version": "1.0.0",
+  "description": "Paloma Series Client",
+  "main": "index.js",
+  "repository": "https://github.com/NoCountryForGeeks/PalomaToSeries",
+  "author": "franmolmedo ivanrodricalleja",
+  "license": "MIT"
+}
