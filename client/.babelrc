@@ -1,0 +1,20 @@
+{
+  "plugins": ["syntax-dynamic-import", "transform-class-properties"],
+  "presets": [
+    "babel-preset-expo",
+    "es2015",
+    "es2016",
+    "es2017",
+    "react",
+    "flow",
+    ["env", { "modules": false } ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
+    },
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}
