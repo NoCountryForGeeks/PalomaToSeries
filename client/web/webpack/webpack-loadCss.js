@@ -14,6 +14,14 @@ module.exports = ({ include, exclude } = {} ) => ({
                             modules: true
                         }
                     },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => ([
+                                require('autoprefixer')()
+                            ])
+                        }
+                    },
                     'sass-loader']
                 },
             ],

@@ -9,6 +9,10 @@
     'parserOptions': {
         'sourceType': 'module',
         'allowImportExportEverywhere': true,
+        'ecmaFeatures': {
+            'jsx': true,
+            'experimentalObjectRestSpread': true
+        }
     },
     'env': {
         'browser': true,
@@ -19,8 +23,10 @@
     },
     'rules': {
         'no-console': 0,
-        'no-underscore-dangle': 1,
+        'no-underscore-dangle': [ 1 , { 'allow': ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] } ],
         'quotes': [2, 'single'],
+        'react/prop-types': 0,
+        'react/no-string-refs': 0,
         'smells/no-switch': 1,
         'smells/no-complex-switch-case': 1,
         'smells/no-setinterval': 1,

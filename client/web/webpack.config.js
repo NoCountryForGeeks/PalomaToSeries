@@ -7,15 +7,17 @@ const { lintJs, devServer, loadCss, extractCss, autoprefixing, purifyCss,
     optimizeBundle, clean, fileRevision, minifyJs, setEnvironmentVariable,
     analyze, scopeHoisting, hotModuleReplacement,
     useHtmlTemplate, configLoaderOptions, performanceOptions,
-    useHashedModuleIds} = require('./webpack');
+    useHashedModuleIds, useExternalScripts} = require('./webpack');
 
 const PATHS = {
     appFolder: path.join(__dirname, '/../app/web'),
     outputFolder: path.join(__dirname, '/../build/web'),
     node_modules: path.join(__dirname, '/../node_modules'),
     indexTemplate: __dirname + '/../app/web/index.tmpl.html',
-    reportsFolder: path.join(__dirname, 'reports')
+    reportsFolder: path.join(__dirname, '/../reports/web'),
+    recordsPath: path.join(__dirname, '/../records/web/records.json')
 };
+
 
 const initialConfig = {
     common: {
@@ -31,7 +33,7 @@ const initialConfig = {
             path: PATHS.outputFolder,
             filename: '[name].[hash].js'
         },
-        plugins: []
+        plugins: [],
     },
     production: {
         entry: {
@@ -42,7 +44,7 @@ const initialConfig = {
             filename: '[name].[chunkhash:8].js'
         },
         plugins: [],
-        recordsPath: path.join(__dirname, 'records.json'),
+        recordsPath: PATHS.recordsPath,
     },
     development: {
         output: {
@@ -60,10 +62,11 @@ const commonConfiguration = merge([
             fix: false
         }
     }),
+    useExternalScripts(/\.exec\.js$/),
     useHtmlTemplate({
         template: PATHS.indexTemplate,
         hash: true,
-        title: 'React Redux Starter - WPT'}),
+        title: 'Series'}),
     lintJs({ include: PATHS.appFolder }),
     lintCss({ include: PATHS.appFolder }),
     loadJs({ include: PATHS.appFolder, exclude: PATHS.node_modules }),
@@ -71,7 +74,7 @@ const commonConfiguration = merge([
         options: {
             name: '[name].[hash:8].[ext]',
         }
-    })
+    }),
 ]);
 
 const productionConfiguration = merge([
@@ -109,7 +112,9 @@ const productionConfiguration = merge([
         options: {
             limit: 15000,
             name: '[name].[hash:8].[ext]',
-        }
+            outputPath: 'content/images/'
+        },
+        include:  PATHS.appFolder
     }),
     generateSourceMaps({ type: 'source-map' }),
     fileRevision(),
@@ -135,9 +140,9 @@ const developmentConfiguration = merge([
     initialConfig.development,
     devServer({ host: process.env.HOST, port: process.env.PORT, open: true }),
     loadCss(),
-    loadImages(),
+    loadImages({ include: PATHS.appFolder }),
     generateSourceMaps({ type: 'cheap-module-source-map' }),
-    hotModuleReplacement()
+    hotModuleReplacement(),
 ]);
 
 module.exports = env => {

@@ -2,9 +2,9 @@ module.exports = ({ host, port, open } = {}) => ({
     devServer: {
         historyApiFallback: true,
         stats: 'errors-only',
-        open,
         host,
         port,
+        open,
         overlay: {
             errors: true,
             warnings: true,

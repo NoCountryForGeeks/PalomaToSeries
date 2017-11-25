@@ -8,6 +8,7 @@ module.exports = ({ include, exclude }) => ({
                 enforce: 'pre',
                 loader: 'postcss-loader',
                 options: {
+                    syntax: 'postcss-scss',
                     plugins: () => ([
                         require('stylelint')()
                     ])

@@ -21,5 +21,7 @@ module.exports = {
     useHtmlTemplate: require('./webpack-useHtmlTemplate'),
     configLoaderOptions: require('./webpack-configLoaderOptions'),
     performanceOptions: require('./webpack-performanceOptions'),
-    useHashedModuleIds: require('./webpack-useHashedModuleIds')
+    useHashedModuleIds: require('./webpack-useHashedModuleIds'),
+    useExternalScripts: require('./webpack-useExternalScripts'),
+    copyFiles: require('./webpack-copyFiles')
 };
