@@ -7,18 +7,18 @@ const { lintJs, devServer, loadCss, extractCss, autoprefixing, purifyCss,
     optimizeBundle, clean, fileRevision, minifyJs, setEnvironmentVariable,
     analyze, scopeHoisting, hotModuleReplacement,
     useHtmlTemplate, configLoaderOptions, performanceOptions,
-    useHashedModuleIds, useExternalScripts} = require('./config/webpack');
+    useHashedModuleIds, useExternalScripts} = require('./webpack');
 
 const PATHS = {
-    mobileFolder: path.join(__dirname, '../mobile'),
-    stateFolder: path.join(__dirname, '../state'),
-    servicesFolder: path.join(__dirname, '../services'),
-    appFolder: path.join(__dirname, 'app'),
+    mobileFolder: path.join(__dirname, '../../app/mobile'),
+    stateFolder: path.join(__dirname, '../../app/state'),
+    servicesFolder: path.join(__dirname, '../../app/services'),
+    appFolder: path.join(__dirname, '../../app/web'),
     outputFolder: path.join(__dirname, '../../build/web'),
     node_modules: path.join(__dirname, '../../node_modules'),
-    indexTemplate: __dirname + '/index.tmpl.html',
-    reportsFolder: path.join(__dirname, '../../reports/web'),
+    indexTemplate: __dirname + '/../../app/web/index.tmpl.html',
     recordsFolder: path.join(__dirname, '../../records/web/records.json'),
+    reportsFolder: path.join(__dirname, '../../reports/web')
 };
 
 const initialConfig = {
