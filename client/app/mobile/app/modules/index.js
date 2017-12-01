@@ -1,7 +1,7 @@
 import React from 'react';
+import createSagaMiddleware from 'redux-saga';
 import { View } from 'react-native';
 import { createStore, applyMiddleware, compose } from 'redux';
-import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 
 import reducers from './reducers';

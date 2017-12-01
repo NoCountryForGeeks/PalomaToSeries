@@ -4,5 +4,5 @@ import { getSeriesDone } from '../actions/getSeries';
 const defaultSeriesState = [];
 
 export default createReducer({
-    [getSeriesDone]: (payload) => payload
+    [getSeriesDone]:  (_,payload) => payload
 }, defaultSeriesState);

@@ -14,11 +14,11 @@ const PATHS = {
     stateFolder: path.join(__dirname, '../state'),
     servicesFolder: path.join(__dirname, '../services'),
     appFolder: path.join(__dirname, 'app'),
-    outputFolder: path.join(__dirname, '../build/web'),
-    node_modules: path.join(__dirname, '../node_modules'),
+    outputFolder: path.join(__dirname, '../../build/web'),
+    node_modules: path.join(__dirname, '../../node_modules'),
     indexTemplate: __dirname + '/index.tmpl.html',
-    reportsFolder: path.join(__dirname, '../reports/web'),
-    recordsFolder: path.join(__dirname, '../records/web/records.json'),
+    reportsFolder: path.join(__dirname, '../../reports/web'),
+    recordsFolder: path.join(__dirname, '../../records/web/records.json'),
 };
 
 const initialConfig = {
@@ -36,6 +36,11 @@ const initialConfig = {
             filename: '[name].[hash].js'
         },
         plugins: [],
+        resolve: { 
+            alias: {
+                state: PATHS.stateFolder 
+            }
+        }
     },
     production: {
         entry: {
