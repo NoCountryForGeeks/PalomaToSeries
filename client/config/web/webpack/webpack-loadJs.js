@@ -1,4 +1,4 @@
-module.exports = ({ include, exclude }) => ({
+module.exports = ({ include, exclude, plugins }) => ({
     module: {
         rules: [
             {
@@ -8,6 +8,7 @@ module.exports = ({ include, exclude }) => ({
                 loader: 'babel-loader',
                 options: {
                     cacheDirectory: true,
+                    plugins
                 }
             }
         ]

@@ -1,6 +1,6 @@
 import { StackNavigator } from 'react-navigation';
 
-import MasterSeries from './series/masterSeries';
+import MasterSeries from './modules/series/masterSeries';
 
 const Router = StackNavigator({
 	Main: { screen: MasterSeries },

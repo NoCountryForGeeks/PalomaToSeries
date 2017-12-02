@@ -1,5 +1,5 @@
 {
-  "main": "app/mobile/AppEntry.js",
+  "main": "config/mobile/AppEntry.js",
   "private": true,
   "scripts": {
     "start:web": "webpack-dev-server --config ./config/web/webpack.config.js --env development --watch",
