@@ -1,11 +1,11 @@
 import { createAction } from 'redux-act'
 
-const GET_SERIES_REQUEST = 'GET_SERIES_REQUEST';
-const GET_SERIES_DONE = 'GET_SERIES_DONE';
-const GET_SERIES_ERROR = 'GET_SERIES_ERROR';
+const GET_ALL_SERIES_REQUEST = 'GET_ALL_SERIES_REQUEST';
+const GET_ALL_SERIES_DONE = 'GET_ALL_SERIES_DONE';
+const GET_ALL_SERIES_ERROR = 'GET_ALL_SERIES_ERROR';
 
-const getSeriesRequest = createAction(GET_SERIES_REQUEST);
-const getSeriesDone = createAction(GET_SERIES_DONE);
-const getSeriesError = createAction(GET_SERIES_ERROR);
+const getAllSeriesRequest = createAction(GET_ALL_SERIES_REQUEST);
+const getAllSeriesDone = createAction(GET_ALL_SERIES_DONE);
+const getAllSeriesError = createAction(GET_ALL_SERIES_ERROR);
 
-export { getSeriesRequest, getSeriesDone, getSeriesError }
+export { getAllSeriesRequest, getAllSeriesDone, getAllSeriesError }

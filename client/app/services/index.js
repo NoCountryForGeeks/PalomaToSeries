@@ -1,1 +1,1 @@
-export { getSeries } from './api/series';
+export { getSeries, searchSeriesByTitle, getSerieById } from './api/series';

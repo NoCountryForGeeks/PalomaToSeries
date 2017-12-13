@@ -1,6 +1,5 @@
 import React from 'react';
 import createSagaMiddleware from 'redux-saga';
-import { View } from 'react-native';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 
@@ -18,13 +17,14 @@ const store = createStore(reducers,
 
 sagas.map(saga => sagaMiddleware.run(saga));
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Router />
-      </Provider>
-    );
-  }
+
+const App =  () => {
+  return (
+    <Provider store={store}>
+      <Router />
+    </Provider>
+  );
 }
+
+export default App;
 

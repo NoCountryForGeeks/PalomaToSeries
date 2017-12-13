@@ -33,6 +33,7 @@ const initialConfig = {
         },
         output: {
             path: PATHS.outputFolder,
+            publicPath: '/',
             filename: '[name].[hash].js'
         },
         plugins: [],
@@ -73,7 +74,7 @@ const commonConfiguration = merge([
     useHtmlTemplate({
         template: PATHS.indexTemplate,
         hash: true,
-        title: 'Dubai360'}),
+        title: 'Series'}),
     lintJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     lintCss({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     loadJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ], plugins: ['transform-class-properties','transform-runtime'] }),

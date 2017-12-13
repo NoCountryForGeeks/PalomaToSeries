@@ -1,9 +1,14 @@
+import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
-import MasterSeries from './modules/series/masterSeries';
+import MasterSeriesSF from '../modules/series/root/MasterSeriesSF';
+import { MasterSeries } from './modules/series/root/MasterSeries';
+
 
 const Router = StackNavigator({
-	Main: { screen: MasterSeries },
+	Main: {
+		screen: props => <MasterSeriesSF render={ MasterSeries } { ...props }/>
+	}
 });
 
 export default Router;

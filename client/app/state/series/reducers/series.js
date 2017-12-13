@@ -1,8 +1,10 @@
 import { createReducer } from 'redux-act';
-import { getSeriesDone } from '../actions/getSeries';
+import { getAllSeriesDone } from '../actions/getSeries';
+import { searchSeriesDone } from '../actions/searchSeries';
 
 const defaultSeriesState = [];
 
 export default createReducer({
-    [getSeriesDone]:  (_,payload) => payload
+    [getAllSeriesDone]: (_, payload) => payload.data,
+    [searchSeriesDone]: (_, payload) => payload.data
 }, defaultSeriesState);
