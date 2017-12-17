@@ -1,9 +1,10 @@
 import React from 'react';
 import SeassonSF from '../../../../../modules/series/root/detailSerieFS/SeassonSF';
 import Seasson from './seassons/Seasson';
+import seassonsTyles from './seassons.scss';
 
 const Seassons = ({ seassons }) => 
-    <div>
+    <div className={ seassonsTyles.seassons }>
         { seassons.map(seasson => 
                 <SeassonSF 
                     render={ Seasson } 
@@ -13,4 +14,4 @@ const Seassons = ({ seassons }) =>
         }
     </div>
 
-export default Seassons
+export default Seassons;

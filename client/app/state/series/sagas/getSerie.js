@@ -1,8 +1,8 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { getSerieRequest, getSerieDone, getSerieError } from '../actions/getSerie';
-import { getSerieById } from '../../../services'
+import { getSerieById } from '../../../services';
 
-function *getSerieSaga(action) {
+function *getSerieAction(action) {
     try {
         const serie= yield call(getSerieById, action.payload);
         yield put(getSerieDone(serie))
@@ -12,5 +12,5 @@ function *getSerieSaga(action) {
 }
 
 export default function *getSerie(){
-    yield takeLatest(getSerieRequest, getSerieSaga);
+    yield takeLatest(getSerieRequest, getSerieAction);
 }

@@ -9,16 +9,17 @@ class SeriesSearchSF extends Component {
     searchSeries(event) {
         event.preventDefault();
         this.props.searchSeries(this.state.search);
+        this.setState({ ...this.state, search: '' })
     }
 
     searchHelpSeries(event) {
-        this.setState({ search: event.target.value })
+        this.setState({ ...this.state, search: event.target.value })
     }
     
     render() {
         return (
             <Fragment>
-                { this.props.render.bind(this)(this.state) }
+                { this.props.render.bind(this)(this) }
             </Fragment>
         )
     }

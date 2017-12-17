@@ -1,4 +1,4 @@
-import { createAction } from 'redux-act'
+import { createAction } from 'redux-act';
 
 const GET_SERIE_REQUEST = 'GET_SERIE_REQUEST';
 const GET_SERIE_DONE = 'GET_SERIE_DONE';
@@ -8,4 +8,4 @@ const getSerieRequest = createAction(GET_SERIE_REQUEST);
 const getSerieDone = createAction(GET_SERIE_DONE);
 const getSerieError = createAction(GET_SERIE_ERROR);
 
-export { getSerieRequest, getSerieDone, getSerieError }
+export { getSerieRequest, getSerieDone, getSerieError };

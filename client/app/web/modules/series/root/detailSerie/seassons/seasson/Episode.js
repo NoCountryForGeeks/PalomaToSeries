@@ -1,10 +1,10 @@
 import React from 'react';
+import episodeStyles from './episode.scss';
 
-const Episode = ({ episode }) =>
-    <div>
-        <img src={ episode.image.medium } alt={ episode.title } />
-        <h4>{ episode.title }</h4>
+const Episode = ({ episode }) => 
+    <div className={ episodeStyles.episode }>
+        <img src={ episode.image != null ? episode.image.medium : null } alt={ episode.title } />
+        <span>{ episode.title }</span>
     </div>
-
 
 export default Episode;

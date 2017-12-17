@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
 import createSagaMiddleware from 'redux-saga';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
-import { ConnectedRouter, routerMiddleware } from 'react-router-redux'
+import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 
 import reducers from './reducers';
 import routes from './routes';
-import sagas from './sagas'
+import sagas from './sagas';
 
 const composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

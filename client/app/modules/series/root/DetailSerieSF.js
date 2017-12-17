@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getSerieRequest } from 'state/series/actions/getSerie'
+import { getSerieRequest } from 'state/series/actions/getSerie';
 
 class DetailSerieSF extends Component {
-
     componentDidMount() {
-        this.props.getSerie(this.props.match.params.id)
+        const { getSerie, match } = this.props;
+        getSerie(match.params.id)
     }
 
     render() {
@@ -20,7 +20,7 @@ class DetailSerieSF extends Component {
 const mapStateToProps = ({ serie }) => ({ serie });
 
 const mapDispatchToProps = dispatch => ({
-    getSerie: id => dispatch(getSerieRequest(id)),
+    getSerie: id => dispatch(getSerieRequest(id))
 });
 
-export default  connect(mapStateToProps, mapDispatchToProps)(DetailSerieSF)
+export default connect(mapStateToProps, mapDispatchToProps)(DetailSerieSF);

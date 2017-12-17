@@ -1,8 +1,9 @@
 import React from 'react';
-import SerieCard from './seriesGrid/SerieCard'
+import SerieCard from './seriesGrid/SerieCard';
+import seriesGridStyles from './seriesGrid.scss';
 
 const SeriesGrid = ({ series }) =>
-    <div>
+    <div className={ seriesGridStyles.seriesGrid }>
         { series.map(serie => 
             <SerieCard 
                 key={ serie.id } 
@@ -11,4 +12,4 @@ const SeriesGrid = ({ series }) =>
         }
     </div>
 
-export default SeriesGrid
+export default SeriesGrid;

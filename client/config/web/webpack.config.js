@@ -7,7 +7,7 @@ const { lintJs, devServer, loadCss, extractCss, autoprefixing, purifyCss,
     optimizeBundle, clean, fileRevision, minifyJs, setEnvironmentVariable,
     analyze, scopeHoisting, hotModuleReplacement,
     useHtmlTemplate, configLoaderOptions, performanceOptions,
-    useHashedModuleIds, useExternalScripts} = require('./webpack');
+    useHashedModuleIds, useExternalScripts, svgSpriteLoader} = require('./webpack');
 
 const PATHS = {
     mobileFolder: path.join(__dirname, '../../app/mobile'),
@@ -18,7 +18,8 @@ const PATHS = {
     node_modules: path.join(__dirname, '../../node_modules'),
     indexTemplate: __dirname + '/../../app/web/index.tmpl.html',
     recordsFolder: path.join(__dirname, '../../records/web/records.json'),
-    reportsFolder: path.join(__dirname, '../../reports/web')
+    reportsFolder: path.join(__dirname, '../../reports/web'),
+    imageFolder: path.join(__dirname, '../../app/content/images')
 };
 
 const initialConfig = {
@@ -78,6 +79,7 @@ const commonConfiguration = merge([
     lintJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     lintCss({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     loadJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ], plugins: ['transform-class-properties','transform-runtime'] }),
+    svgSpriteLoader({ spriteFilename: './svg/sprite.svg' }),
     loadFonts({
         options: {
             name: '[name].[hash:8].[ext]',
@@ -148,7 +150,7 @@ const developmentConfiguration = merge([
     initialConfig.development,
     devServer({ host: process.env.HOST, port: process.env.PORT, open: true }),
     loadCss(),
-    loadImages({ include: PATHS.appFolder }),
+    loadImages({ include: PATHS.imageFolder }),
     generateSourceMaps({ type: 'cheap-module-source-map' }),
     hotModuleReplacement(),
 ]);

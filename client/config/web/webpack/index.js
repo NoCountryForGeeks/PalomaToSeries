@@ -23,5 +23,6 @@ module.exports = {
     performanceOptions: require('./webpack-performanceOptions'),
     useHashedModuleIds: require('./webpack-useHashedModuleIds'),
     useExternalScripts: require('./webpack-useExternalScripts'),
-    copyFiles: require('./webpack-copyFiles')
+    copyFiles: require('./webpack-copyFiles'),
+    svgSpriteLoader: require('./webpack-svgSpriteLoader')
 };

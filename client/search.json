@@ -8,7 +8,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/322.jpg"
         },
         "id": 34,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 4442,
@@ -406,7 +406,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/326.jpg"
         },
         "id": 35,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 6256,
@@ -1347,7 +1347,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/126/316698.jpg"
         },
         "id": 37,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 666,
@@ -1559,7 +1559,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/130/325652.jpg"
         },
         "id": 38,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 6293,
@@ -2490,7 +2490,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/350.jpg"
         },
         "id": 39,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 6326,
@@ -2871,7 +2871,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/361.jpg"
         },
         "id": 40,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 55953,
@@ -3624,7 +3624,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/102/256598.jpg"
         },
         "id": 41,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 6401,
@@ -5190,7 +5190,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/81/204166.jpg"
         },
         "id": 42,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 6538,
@@ -6202,7 +6202,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/382.jpg"
         },
         "id": 45,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 1259,
@@ -7210,7 +7210,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/383.jpg"
         },
         "id": 46,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 1147,
@@ -7596,7 +7596,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/392.jpg"
         },
         "id": 47,
-        "genres": [
+        "characters": [
             {
                 "person": {
                     "id": 6831,

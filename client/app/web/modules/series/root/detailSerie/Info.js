@@ -1,10 +1,15 @@
-import React from 'react' 
+import React from 'react';
+import infoStyles from './info.scss';
 
 const Info = ({ serie }) =>
-    <div>
-        <img src={ serie.image.original } alt={ serie.title }/>
-        <h3>{ serie.title }</h3>
-        <span>{ serie.languaje }</span>
+    <div className={ infoStyles.info }>
+        <div>
+            <img src={ serie.image.medium } alt={ serie.title }/>
+        </div>
+        <div className={ infoStyles.detail }>
+            <h3>{ serie.title }</h3>
+            <span>{ serie.languaje }</span>
+        </div>
     </div>
 
 export default Info;

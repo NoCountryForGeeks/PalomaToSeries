@@ -2,7 +2,7 @@ module.exports = ({ include, exclude, options } = {}) => ({
     module: {
         rules: [
             {
-                test: /\.(png|jpg|svg)$/,
+                test: /\.(png|jpg|gif)$/,
                 include,
                 exclude,
                 use: {
