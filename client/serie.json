@@ -7,7 +7,7 @@
             "http://static.tvmaze.com/uploads/images/original_untouched/102/256598.jpg"
     },
     "id": 41,
-    "characters": [
+    "actors": [
         {
             "person": {
                 "id": 6401,
@@ -251,8 +251,7 @@
             }
         }
     ],
-    "languaje": "English",
-    "actors": [],
+    "language": "English",
     "seassons": [
         {
             "seassonId": 135,

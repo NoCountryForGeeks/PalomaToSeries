@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { searchSeriesRequest, searchSeriesDone, searchSeriesError } from '../actions/searchSeries';
-import { searchSeriesByTitle } from '../../../services';
+import { searchSeriesByTitle } from 'services';
 
 function *seachSeriesAction(action) {
     try {

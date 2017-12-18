@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import SeriesGrid from './masterSeries/SeriesGrid';
+import { View } from 'react-native';
 
-export const MasterSeries = () => 
+
+export const MasterSeries = props =>
     <View>
-        <Text>yeee</Text>
+        <SeriesGrid series={ props.series } />
     </View>

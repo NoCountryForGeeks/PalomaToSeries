@@ -1,7 +1,7 @@
 import React from 'react';
-import searchIcon from '../../../../../content/icons/magnifier.svg';
+import searchIcon from 'content/icons/magnifier.svg';
 import searchStyles from './seriesSearch.scss';
-import Icon from '../../../shared/Icon';
+import Icon from 'webSharedComponents/Icon';
 
 const SeriesSearch = function({ state }) { 
     const { serieSearch, magnifierIcon } = searchStyles;

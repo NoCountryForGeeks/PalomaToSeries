@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { getSerieRequest, getSerieDone, getSerieError } from '../actions/getSerie';
-import { getSerieById } from '../../../services';
+import { getSerieById } from 'services';
 
 function *getSerieAction(action) {
     try {

@@ -38,11 +38,6 @@ const initialConfig = {
             filename: '[name].[hash].js'
         },
         plugins: [],
-        resolve: { 
-            alias: {
-                state: PATHS.stateFolder 
-            }
-        }
     },
     production: {
         entry: {
@@ -79,7 +74,7 @@ const commonConfiguration = merge([
     lintJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     lintCss({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     loadJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ], plugins: ['transform-class-properties','transform-runtime'] }),
-    svgSpriteLoader({ spriteFilename: './svg/sprite.svg' }),
+    svgSpriteLoader({ spriteFilename: './content/svg/sprite.svg' }),
     loadFonts({
         options: {
             name: '[name].[hash:8].[ext]',

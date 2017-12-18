@@ -9,7 +9,7 @@ class SeriesSearchSF extends Component {
     searchSeries(event) {
         event.preventDefault();
         this.props.searchSeries(this.state.search);
-        this.setState({ ...this.state, search: '' })
+        this.setState({ search: '' })
     }
 
     searchHelpSeries(event) {

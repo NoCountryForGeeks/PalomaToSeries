@@ -1,5 +1,5 @@
 import React from 'react';
-import SeassonSF from '../../../../../modules/series/root/detailSerieFS/SeassonSF';
+import SeassonSF from 'modules/series/root/detailSerieFS/SeassonSF';
 import Seasson from './seassons/Seasson';
 import seassonsTyles from './seassons.scss';
 

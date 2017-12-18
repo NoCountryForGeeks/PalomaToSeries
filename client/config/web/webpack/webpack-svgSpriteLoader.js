@@ -1,7 +1,6 @@
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = ({ spriteFilename, include, exclude } = {}) =>({
-   
     module: {
         rules: [
             {

@@ -1,8 +1,8 @@
 import React from 'react';
 import Episode from './seasson/Episode';
-import Icon from '../../../../shared/Icon';
+import Icon from 'webSharedComponents/Icon';
 import seassonStyles from './seasson.scss';
-import downArrowIcon from '../../../../../../content/icons/down-arrow.svg'
+import downArrowIcon from 'content/icons/down-arrow.svg'
 
 const Seasson = function() {
     return(

@@ -8,7 +8,7 @@ const Info = ({ serie }) =>
         </div>
         <div className={ infoStyles.detail }>
             <h3>{ serie.title }</h3>
-            <span>{ serie.languaje }</span>
+            <span>{ serie.language }</span>
         </div>
     </div>
 

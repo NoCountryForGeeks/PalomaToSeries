@@ -8,7 +8,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/322.jpg"
         },
         "id": 34,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 4442,
@@ -120,8 +120,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 120,
@@ -406,7 +405,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/326.jpg"
         },
         "id": 35,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 6256,
@@ -869,8 +868,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 121,
@@ -1347,7 +1345,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/126/316698.jpg"
         },
         "id": 37,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 666,
@@ -1459,8 +1457,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 129,
@@ -1559,7 +1556,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/130/325652.jpg"
         },
         "id": 38,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 6293,
@@ -1957,8 +1954,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 130,
@@ -2490,7 +2486,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/350.jpg"
         },
         "id": 39,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 6326,
@@ -2707,8 +2703,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 131,
@@ -2871,7 +2866,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/361.jpg"
         },
         "id": 40,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 55953,
@@ -3213,8 +3208,7 @@
                 }
             }
         ],
-        "languaje": "Japanese",
-        "actors": [],
+        "language": "Japanese",
         "seassons": [
             {
                 "seassonId": 133,
@@ -3624,7 +3618,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/102/256598.jpg"
         },
         "id": 41,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 6401,
@@ -3868,8 +3862,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 135,
@@ -5190,7 +5183,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/81/204166.jpg"
         },
         "id": 42,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 6538,
@@ -5544,8 +5537,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 139,
@@ -6202,7 +6194,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/382.jpg"
         },
         "id": 45,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 1259,
@@ -6380,8 +6372,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 143,
@@ -7210,7 +7201,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/383.jpg"
         },
         "id": 46,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 1147,
@@ -7356,8 +7347,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 144,
@@ -7596,7 +7586,7 @@
                 "http://static.tvmaze.com/uploads/images/original_untouched/0/392.jpg"
         },
         "id": 47,
-        "characters": [
+        "actors": [
             {
                 "person": {
                     "id": 6831,
@@ -7747,8 +7737,7 @@
                 }
             }
         ],
-        "languaje": "English",
-        "actors": [],
+        "language": "English",
         "seassons": [
             {
                 "seassonId": 145,

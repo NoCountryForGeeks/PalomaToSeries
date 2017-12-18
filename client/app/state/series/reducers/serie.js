@@ -2,7 +2,7 @@ import { createReducer } from 'redux-act';
 import { getSerieDone } from '../actions/getSerie';
 
 const defaultSerieSerieState = {
-    characters: [],
+    actors: [],
     image: {},
     seassons: []
 };

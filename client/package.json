@@ -21,6 +21,7 @@
     "axios": "^0.17.1",
     "expo": "^23.0.0",
     "history": "^4.7.2",
+    "module-resolver": "^1.0.0",
     "react": "^16.2.0",
     "react-async-component": "^1.0.1",
     "react-dom": "^16.2.0",
