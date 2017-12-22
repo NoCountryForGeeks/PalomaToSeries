@@ -1,0 +1,24 @@
+# Build results
+build/
+reports/
+records/
+
+# Node-modules
+node_modules/
+
+# Generated files
+.eslintcache
+npm-debug.log
+__snapshots__/
+__mocks__/
+stats.json
+records.json
+
+# Visual Studio cache/options directory
+.vs/
+
+# WebStorm
+*idea*
+
+# Coverage
+coverage/

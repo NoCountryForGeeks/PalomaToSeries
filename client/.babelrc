@@ -1,0 +1,23 @@
+{
+  "presets": ["babel-preset-expo"],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
+    }
+  },
+  "plugins": [
+    [
+      "module-resolver", {
+        "alias": {
+          "state": "./app/state",
+          "services": "./app/services",
+          "content": "./app/content",
+          "modules": "./app/modules",
+          "webSharedComponents": "./app/web/modules/shared",
+          "webContent": "./app/webcontent",
+          "webConfig": "./app/web/config.js"
+        }
+      }
+    ]
+  ]
+}

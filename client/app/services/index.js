@@ -1,0 +1,1 @@
+export { getSeries, searchSeriesByTitle, getSerieById } from './api/series';

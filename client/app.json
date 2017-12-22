@@ -1,0 +1,26 @@
+{
+    "name": "series",
+    "displayName": "series",
+    "expo": {
+        "name": "client",
+        "description": "An empty new project",
+        "slug": "client",
+        "privacy": "public",
+        "sdkVersion": "23.0.0",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "primaryColor": "#cccccc",
+        "icon": "./app/assets/icon.png",
+        "splash": {
+            "image": "./app/assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "ios": {
+            "bundleIdentifier": "com.nc4g.series"
+        },
+        "android": {
+            "package": "com.nc4g.series"
+        }
+    }
+}
