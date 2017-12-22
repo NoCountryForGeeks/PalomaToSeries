@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getAllSeriesRequest } from 'state/series/actions/getSeries';
 import { searchSeriesRequest } from 'state/series/actions/searchSeries';
 
+
 class MasterSeriesSF extends Component {
     componentDidMount() {
         this.props.getAllSeries();
@@ -11,7 +12,7 @@ class MasterSeriesSF extends Component {
     render() {
         return (
             <Fragment>
-                { this.props.render(this.props) }
+                { this.props.render.bind(this)(this.props) }
             </Fragment>
         )
     }

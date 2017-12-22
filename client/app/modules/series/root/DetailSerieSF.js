@@ -3,15 +3,16 @@ import { connect } from 'react-redux';
 import { getSerieRequest } from 'state/series/actions/getSerie';
 
 class DetailSerieSF extends Component {
-    componentDidMount() {
-        const { getSerie, match } = this.props;
-        getSerie(match.params.id)
+   componentDidMount() {
+        const { getSerie, serieId } = this.props;
+        getSerie(serieId);
+        console.log('getSerie', serieId);
     }
 
     render() {
         return (
             <Fragment>
-                { this.props.render(this.props) }
+                { this.props.render.bind(this)(this.props) }
             </Fragment>
         )
     }

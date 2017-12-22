@@ -7,13 +7,13 @@ const SeriesSearch = function({ state }) {
     const { serieSearch, magnifierIcon } = searchStyles;
     return(
         <div className={ serieSearch }>
-            <form onSubmit={ this.searchSeries.bind(this) }>
+            <form onSubmit={ event => { event.preventDefault(); this.searchSeries.bind(this)() }}>
                 <input 
                     type='text'
                     name='search'
                     placeholder='Search...'
                     value={ state.seach } 
-                    onKeyDown={ this.searchHelpSeries.bind(this) }
+                    onKeyUp={ event => this.searchHelpSeries.bind(this)(event.target.value) }
                 />
                 <button type="submit">
                     <Icon svgIcon={ searchIcon } className={ magnifierIcon } title='Search'/>
