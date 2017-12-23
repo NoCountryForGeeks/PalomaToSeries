@@ -5,9 +5,11 @@ import { NavigationActions } from 'react-navigation';
 
 class Link extends Component {
     render() {
-        const { to, navigate } = this.props;
+        const { to, navigate, style } = this.props;
         return(
-            <TouchableWithoutFeedback onPress={() => { navigate(to) }}>
+            <TouchableWithoutFeedback 
+                style={ style }
+                onPress={() => { navigate(to) }}>
                 { this.props.children }
             </TouchableWithoutFeedback>
         )

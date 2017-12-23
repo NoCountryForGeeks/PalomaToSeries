@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component/*, Fragment*/ } from 'react';
 import { connect } from 'react-redux';
 import { getAllSeriesRequest } from 'state/series/actions/getSeries';
 import { searchSeriesRequest } from 'state/series/actions/searchSeries';
-
+import { View } from 'react-native';
 
 class MasterSeriesSF extends Component {
     componentDidMount() {
@@ -11,9 +11,9 @@ class MasterSeriesSF extends Component {
 
     render() {
         return (
-            <Fragment>
+            <View style={{flex: 1}}>
                 { this.props.render.bind(this)(this.props) }
-            </Fragment>
+            </View>
         )
     }
 }
