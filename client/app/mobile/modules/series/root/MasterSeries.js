@@ -6,7 +6,7 @@ import { View, Image, StyleSheet } from 'react-native';
 import background from '../../../../content/images/background.jpg'
 
 export const MasterSeries = props => 
-    <View style={ styles.container } source={ background }>
+    <View style={ styles.container }>
         <Image style={ styles.backgroundContainer } source={ background } />
         <View style={ styles.contentContainer }>
             <SeriesSearchSF render={ SeriesSearch } searchSeries={ props.searchSeries }/>

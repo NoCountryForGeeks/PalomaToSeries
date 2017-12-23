@@ -6,7 +6,7 @@ import { View,
 } from 'react-native';
 
 const Info = ({ serie }) =>
-    <View>
+    <View style={ styles.container }>
         <Image 
             style={ styles.image }
             source={{
@@ -14,7 +14,7 @@ const Info = ({ serie }) =>
                 cache: 'only-if-cached',
             }}
         />
-        <View>
+        <View style={ styles.dataContainer }>
             <Text style={ styles.title }>{ serie.title }</Text>
             <View style={ styles.dataAlignRow }>
                 <View style={ styles.leftDataChild }>
@@ -31,10 +31,20 @@ const Info = ({ serie }) =>
 export default Info;
 
 const styles = StyleSheet.create({
+    container: {
+        marginBottom: 10
+    },
     image: {
         width: '100%',
         height: 500,
         resizeMode: 'contain'
+    },
+    dataContainer: {
+        borderBottomColor: '#828080',
+        borderBottomWidth: 0.5,
+        paddingBottom: 10,
+        backgroundColor: 'rgb(211, 211, 211)',
+        padding: 10
     },
     title: {
         fontSize: 30,
