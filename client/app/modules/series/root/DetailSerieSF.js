@@ -12,7 +12,7 @@ class DetailSerieSF extends Component {
 
     render() {
         return (
-            <View>
+            <View style={{flex: 1}}>
                 { this.props.render.bind(this)(this.props) }
             </View>
         )

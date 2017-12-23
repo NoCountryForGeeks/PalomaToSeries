@@ -5,7 +5,7 @@ import { View,
     StyleSheet,
     Image
 } from 'react-native'; 
-import searchIcon from 'content/images/search.png';
+import searchIcon from 'content/icons/magnifier.png';
 
 const SeriesSearch = function({ state }) { 
     return(
