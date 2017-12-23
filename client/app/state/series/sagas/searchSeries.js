@@ -1,10 +1,14 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { /*call, */put, takeLatest } from 'redux-saga/effects';
 import { searchSeriesRequest, searchSeriesDone, searchSeriesError } from '../actions/searchSeries';
-import { searchSeriesByTitle } from 'services';
+//import { searchSeriesByTitle } from 'services';
+import fakeSeries from '../../../../search.json';
 
-function *seachSeriesAction(action) {
+function *seachSeriesAction(/*action*/) {
     try {
-        const series = yield call(searchSeriesByTitle, action.payload);     
+        //const series = yield call(searchSeriesByTitle, action.payload);     
+        const series = {
+            data: fakeSeries
+        }
         yield put(searchSeriesDone(series))
     } catch (error) {
         yield put(searchSeriesError(error))

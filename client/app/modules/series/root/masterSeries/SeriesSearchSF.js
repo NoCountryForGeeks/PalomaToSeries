@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-
+import React, { Component/*, Fragment*/ } from 'react';
+import { View } from 'react-native';
 class SeriesSearchSF extends Component {
     constructor(props) {
         super(props);
@@ -17,9 +17,9 @@ class SeriesSearchSF extends Component {
     
     render() {
         return (
-            <Fragment>
+            <View>
                 { this.props.render.bind(this)(this) }
-            </Fragment>
+            </View>
         )
     }
 }
