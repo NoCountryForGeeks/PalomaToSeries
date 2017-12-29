@@ -9,7 +9,8 @@ class Link extends Component {
         return(
             <TouchableWithoutFeedback 
                 style={ style }
-                onPress={() => { navigate(to) }}>
+                onPress={() => { navigate(to) }}
+            >
                 { this.props.children }
             </TouchableWithoutFeedback>
         )
@@ -17,7 +18,7 @@ class Link extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    navigate: to => dispatch(NavigationActions.navigate(to)),
+    navigate: to => dispatch(NavigationActions.navigate(to))
 });
 
 export default connect(null, mapDispatchToProps)(Link);

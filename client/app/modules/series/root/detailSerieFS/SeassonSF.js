@@ -1,5 +1,5 @@
-import React, { Component/*, Fragment*/ } from 'react';
-import { View } from 'react-native';
+import React, { Component } from 'react';
+import CustomFragment from 'customFragment';
 
 class SeassonSF extends Component {   
     constructor(props) {
@@ -13,9 +13,9 @@ class SeassonSF extends Component {
 
     render() {
         return (
-            <View>
+            <CustomFragment>
                 { this.props.render.bind(this)() }
-            </View>
+            </CustomFragment>
         )
     }
 }

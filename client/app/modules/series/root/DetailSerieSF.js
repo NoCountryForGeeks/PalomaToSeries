@@ -1,7 +1,7 @@
-import React, { Component/*, Fragment*/ } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getSerieRequest } from 'state/series/actions/getSerie';
-import { View } from 'react-native';
+import CustomFragment from 'customFragment';
 
 class DetailSerieSF extends Component {
    componentDidMount() {
@@ -12,9 +12,9 @@ class DetailSerieSF extends Component {
 
     render() {
         return (
-            <View style={{flex: 1}}>
+            <CustomFragment>
                 { this.props.render.bind(this)(this.props) }
-            </View>
+            </CustomFragment>
         )
     }
 }

@@ -1,4 +1,4 @@
-import Router from '../../routes';
+import Router from 'mobileRouter';
 
 const initialState = Router.router.getActionForPathAndParams('Master');
 

@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
         borderBottomColor: '#828080',
         borderBottomWidth: 0.5
     }
-})
+});

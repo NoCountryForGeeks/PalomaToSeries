@@ -3,7 +3,7 @@ import { View, Image, ScrollView, StyleSheet } from 'react-native';
 import Info from './detailSerie/Info';
 import Seassons from './detailSerie/Seassons';
 import Actors from './detailSerie/Actors';
-import background from '../../../../content/images/background.jpg'
+import background from 'content/images/background.jpg'
 
 const DetailSerie = ({ serie }) => 
     <View style={ styles.container }>
@@ -38,5 +38,5 @@ const styles = StyleSheet.create({
         width: undefined,
         height: undefined,
         backgroundColor: '#889DAD',
-    },
+    }
 });
