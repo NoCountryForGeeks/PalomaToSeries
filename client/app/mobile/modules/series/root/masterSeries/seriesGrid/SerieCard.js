@@ -9,8 +9,7 @@ import Link from '../../../../shared/Link';
 
 const SerieCard = function({ serie }) {
     return(
-        <Link
-            to={{ routeName: 'Detail', params: { id: serie.id }}}  >
+        <Link to={{ routeName: 'Detail', params: { id: serie.id } }}>
             <View style={ styles.container }>
                 <Image 
                     style={ styles.image }
@@ -23,7 +22,7 @@ const SerieCard = function({ serie }) {
                     <Text style={ styles.title }>{ serie.title }</Text>
                     <View style={ styles.dataAlignRow }>
                         <View style={ styles.leftDataChild }>
-                            <Text style={ styles.textFormat}>{ serie.language }</Text>
+                            <Text style={ styles.textFormat }>{ serie.language }</Text>
                         </View>
                         <View style={ styles.rightDataChild }>
                             <Text style={ styles.textFormat }>Episodios: 100</Text>
@@ -76,4 +75,4 @@ const styles = StyleSheet.create({
         color: '#828080',
         fontSize: 15
     }
-})
+});

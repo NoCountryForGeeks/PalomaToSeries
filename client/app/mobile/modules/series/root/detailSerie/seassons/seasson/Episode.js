@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'rgb(211, 211, 211)'
     }
-})
+});

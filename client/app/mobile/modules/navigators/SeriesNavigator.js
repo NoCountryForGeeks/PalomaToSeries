@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addNavigationHelpers } from 'react-navigation';
-import Router from '../../routes';
+import Router from 'mobileRouter';
 
 
 const SeriesNavigator = ({ dispatch, nav }) => (

@@ -3,7 +3,7 @@ import SeriesGrid from './masterSeries/SeriesGrid';
 import SeriesSearchSF from 'modules/series/root/masterSeries/SeriesSearchSF';
 import SeriesSearch from './masterSeries/SeriesSearch';
 import { View, Image, StyleSheet } from 'react-native';
-import background from '../../../../content/images/background.jpg'
+import background from 'content/images/background.jpg'
 
 export const MasterSeries = props => 
     <View style={ styles.container }>
@@ -32,5 +32,5 @@ const styles = StyleSheet.create({
         width: undefined,
         height: undefined,
         backgroundColor: '#889DAD',
-    },
+    }
 }); 
