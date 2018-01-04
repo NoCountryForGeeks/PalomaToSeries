@@ -7,6 +7,7 @@ import reducers from './reducers';
 import sagas from './sagas';
 
 import SeriesNavigator from './modules/navigators/SeriesNavigator';
+import SeriesRoot from './modules/series/Series-root';
 
 const composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -22,7 +23,9 @@ sagas.map(saga => sagaMiddleware.run(saga));
 const App =  () => {
   return (
     <Provider store={store}>
-      <SeriesNavigator />
+      <SeriesRoot>
+        <SeriesNavigator />
+      </SeriesRoot>
     </Provider>
   );
 }

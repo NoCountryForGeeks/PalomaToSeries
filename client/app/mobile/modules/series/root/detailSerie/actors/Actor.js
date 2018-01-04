@@ -3,10 +3,10 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import exchangeIcon from 'content/icons/exchange.png';
 
 const Actor = ({ actor: { person, character} }) => 
-        <View style={ styles.container }>
-            <View style={ styles.subContainer }>
+        <View style={ styles.actor }>
+            <View style={ styles.actorDataContainer }>
                 <Image 
-                    style={ styles.image }
+                    style={ styles.actorImage }
                     source={{
                         uri: person.image.medium,
                         cache: 'only-if-cached',
@@ -20,9 +20,9 @@ const Actor = ({ actor: { person, character} }) =>
                     style={ styles.exchangeImage }
                 />
             </View>
-            <View style={ styles.subContainer }>
+            <View style={ styles.actorDataContainer }>
                 <Image 
-                    style={ styles.image }
+                    style={ styles.actorImage }
                     source={{
                         uri: character.image.medium,
                         cache: 'only-if-cached',
@@ -35,18 +35,18 @@ const Actor = ({ actor: { person, character} }) =>
 export default Actor;
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'rgb(211, 211, 211)',
+    actor: {
+        backgroundColor: '#fff',
         marginBottom: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: 10
     },
-    subContainer: {
+    actorDataContainer: {
         flex: 0.4
     },
-    image: {
+    actorImage: {
         width: '100%', 
         height: 180,
         resizeMode: 'contain'

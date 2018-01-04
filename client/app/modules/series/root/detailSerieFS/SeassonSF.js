@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import CustomFragment from 'customFragment';
+
+import { CustomFragment } from 'globalSharedComponents';
 
 class SeassonSF extends Component {   
     constructor(props) {
@@ -14,7 +15,7 @@ class SeassonSF extends Component {
     render() {
         return (
             <CustomFragment>
-                { this.props.render.bind(this)() }
+                { this.props.render.bind(this)(this) }
             </CustomFragment>
         )
     }
