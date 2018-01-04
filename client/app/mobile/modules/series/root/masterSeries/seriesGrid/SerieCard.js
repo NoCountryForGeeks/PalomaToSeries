@@ -1,32 +1,27 @@
 import React from 'react';
-import {
-    View,
-    Image,
-    Text,
-    StyleSheet
-} from 'react-native';
-import Link from '../../../../shared/Link';
+import { View, Image, Text, StyleSheet } from 'react-native';
+import { Link } from 'mobileSharedComponents';
 
 const SerieCard = function({ serie }) {
     return(
         <Link to={{ routeName: 'Detail', params: { id: serie.id } }}>
-            <View style={ styles.container }>
+            <View style={ styles.serieCard }>
                 <Image 
-                    style={ styles.image }
+                    style={ styles.serieImage }
                     source={{
                         uri: serie.image.medium,
                         cache: 'only-if-cached',
                     }}
                 />
-                <View style={ styles.dataContainer }>
-                    <Text style={ styles.title }>{ serie.title }</Text>
-                    <View style={ styles.dataAlignRow }>
-                        <View style={ styles.leftDataChild }>
-                            <Text style={ styles.textFormat }>{ serie.language }</Text>
+                <View style={ styles.serieDetailContainer }>
+                    <Text style={ styles.serieTitle }>{ serie.title }</Text>
+                    <View style={ styles.alignRow }>
+                        <View style={ styles.leftChildRow }>
+                            <Text style={ styles.serieTextFormat }>{ serie.language }</Text>
                         </View>
-                        <View style={ styles.rightDataChild }>
-                            <Text style={ styles.textFormat }>Episodios: 100</Text>
-                            <Text style={ styles.textFormat }>Temporadas: 6</Text>
+                        <View style={ styles.rightChildRow }>
+                            <Text style={ styles.serieTextFormat }>Episodios: 100</Text>
+                            <Text style={ styles.serieTextFormat }>Temporadas: 6</Text>
                         </View>
                     </View>
                 </View>
@@ -38,15 +33,18 @@ const SerieCard = function({ serie }) {
 export default SerieCard;
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'rgb(211, 211, 211)',
+    serieCard: {
+        backgroundColor: '#fff',
         marginBottom: 20,
     },
-    image: {
+    serieImage: {
         width: '100%', 
         height: 300
     },
-    title: {
+    serieDetailContainer: {
+        padding: 10
+    },
+    serieTitle: {
         fontSize: 30,
         fontWeight: 'bold',
         color: '#828080',
@@ -55,23 +53,20 @@ const styles = StyleSheet.create({
         borderBottomColor: '#828080',
         borderBottomWidth: 0.5
     },
-    dataContainer: {
-        padding: 10
-    },
-    dataAlignRow: {
+    alignRow: {
         flexDirection: 'row'
     },
-    leftDataChild: {
+    leftChildRow: {
         flex: 0.5,
         paddingRight: 10,
         borderRightColor: '#828080',
         borderRightWidth: 0.5
     },
-    rightDataChild: {
+    rightChildRow: {
         flex: 0.5,
         paddingLeft: 10
     },
-    textFormat: {
+    serieTextFormat: {
         color: '#828080',
         fontSize: 15
     }

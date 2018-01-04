@@ -9,24 +9,24 @@ import searchIcon from 'content/icons/magnifier.png';
 
 const SeriesSearch = function({ state }) { 
     return(
-        <View style={ styles.container }>
-            <View style={ styles.borderContainer }>
+        <View style={ styles.searchBar }>
+            <View style={ styles.searchBarBorder }>
                 <TextInput 
-                    style={ styles.textInput }
+                    style={ styles.searchBarTextInput }
                     placeholder='Search...'
                     value={ state.search }
                     underlineColorAndroid='transparent'
                     onChangeText={ value => this.searchHelpSeries.bind(this)(value) }
                 />
                 <TouchableWithoutFeedback 
-                    style={ styles.button }
+                    style={ styles.searchBarSubmitButton }
                     onPress={ this.searchSeries.bind(this) }
                     title='Search'
                 >
                     <View>
                         <Image 
                             source={ searchIcon }
-                            style={ styles.image }
+                            style={ styles.searchBarButtonIcon }
                         />
                     </View>
                 </TouchableWithoutFeedback>
@@ -37,12 +37,12 @@ const SeriesSearch = function({ state }) {
 export default SeriesSearch;
 
 const styles = StyleSheet.create({
-    container: {
+    searchBar: {
         backgroundColor: '#242424',
         paddingVertical: 10,
         paddingHorizontal: 10
     },
-    borderContainer: {
+    searchBarBorder: {
         flexDirection: 'row',
         borderRadius: 20,
         borderWidth: 2,
@@ -50,16 +50,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20
     },
-    textInput: {
+    searchBarTextInput: {
         flex: 1,
         fontSize: 15,
         color: 'rgb(211, 211, 211)',
         marginRight: 20
     },
-    button: {
+    searchBarSubmitButton: {
         flex: 1
     },
-    image: {
+    searchBarButtonIcon: {
         width: 20, 
         height: 20,
     }

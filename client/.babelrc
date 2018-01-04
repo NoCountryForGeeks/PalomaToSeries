@@ -16,7 +16,7 @@
           "webSharedComponents": "./app/web/modules/shared",
           "webContent": "./app/webcontent",
           "webConfig": "./app/web/config.js",
-          "customFragment": "./app/modules/shared/CustomFragment.js",
+          "globalSharedComponents": "./app/modules/shared",
           "mobileApp": "./app/mobile",
           "mobileSharedComponents": "./app/mobile/modules/shared",
           "mobileRouter": "./app/mobile/router.js"

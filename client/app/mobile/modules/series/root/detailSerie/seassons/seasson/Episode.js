@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 const Episode = ({ episode }) => 
-    <View style={ styles.container }>
+    <View style={ styles.episode }>
         <Image 
-            style={ styles.image }
+            style={ styles.episodeImage }
             source={{
                 uri: episode.image ? episode.image.medium : null,
                 cache: 'only-if-cached',
@@ -16,7 +16,7 @@ const Episode = ({ episode }) =>
 export default Episode;
 
 const styles = StyleSheet.create({
-    container: {
+    episode: {
         backgroundColor: '#828080',
         borderBottomColor: 'rgb(211, 211, 211)',
         borderBottomWidth: 1,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
-    image: {
+    episodeImage: {
         width: 50, 
         height: 50,
         marginRight: 10 

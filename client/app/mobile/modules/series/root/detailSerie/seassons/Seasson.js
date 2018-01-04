@@ -9,26 +9,24 @@ import Episode from './seasson/Episode';
 import upIcon from 'content/icons/up-arrow.png';
 import downIcon from 'content/icons/down-arrow.png';
 
-const Seasson = function() {
+const Seasson = function({ state, props, toogle }) {
     return(
         <TouchableWithoutFeedback 
             title='toggle' 
-            onPress={ this.toogle.bind(this) }
+            onPress={ toogle.bind(this) }
         >
-            <View style={ styles.container }>
+            <View style={ styles.seasson }>
                 <View style={ styles.seassonRow }>
-                    <Text style={ styles.seassonText }>Seasson { this.props.seasson.seasson }</Text>
+                    <Text style={ styles.seassonText }>Seasson { props.seasson.seasson }</Text>
                     <View>
-                        <View>
-                            <Image 
-                                source={ this.state.isOpen ? upIcon : downIcon }
-                                style={ styles.image }
-                            />
-                        </View>
+                        <Image 
+                            source={ state.isOpen ? upIcon : downIcon }
+                            style={ styles.seassonImage }
+                        />
                     </View>
                 </View>
                 <View>
-                    { this.state.isOpen ? this.props.seasson.episodes.map(episode => 
+                    { state.isOpen ? props.seasson.episodes.map(episode => 
                         <Episode 
                             key={ episode.title } 
                             episode={ episode } 
@@ -43,14 +41,16 @@ const Seasson = function() {
 export default Seasson;
 
 const styles = StyleSheet.create({
-    container: {
+    seasson: {
         marginBottom: 10,
     },
     seassonRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: 'rgb(211, 211, 211)',
-        padding: 10
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        paddingVertical: 15
     },
     seassonText: {
         flex: 1,
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
         color: '#828080',
         fontSize: 15
     },
-    image: {
-        width: 20, 
-        height: 20,
+    seassonImage: {
+        width: 30, 
+        height: 30,
     }
 });

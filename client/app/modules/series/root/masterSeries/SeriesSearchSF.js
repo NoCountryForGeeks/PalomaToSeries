@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import CustomFragment from 'customFragment';
+
+import { CustomFragment } from 'globalSharedComponents';
 
 class SeriesSearchSF extends Component {
     constructor(props) {

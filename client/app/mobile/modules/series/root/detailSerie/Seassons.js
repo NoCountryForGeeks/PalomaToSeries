@@ -4,7 +4,7 @@ import SeassonSF from 'modules/series/root/detailSerieFS/SeassonSF';
 import Seasson from './seassons/Seasson';
 
 const Seassons = ({ seassons }) => 
-    <View style={ styles.container }>
+    <View style={ styles.seassonsContainer }>
         { seassons.map(seasson => 
             <SeassonSF 
                 render={ Seasson } 
@@ -17,9 +17,7 @@ const Seassons = ({ seassons }) =>
 export default Seassons;
 
 const styles = StyleSheet.create({
-    container: {
+    seassonsContainer: {
         marginBottom: 10,
-        borderBottomColor: '#828080',
-        borderBottomWidth: 0.5
     }
 });

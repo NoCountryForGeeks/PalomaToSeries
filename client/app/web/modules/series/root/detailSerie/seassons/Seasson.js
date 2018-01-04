@@ -4,17 +4,17 @@ import Icon from 'webSharedComponents/Icon';
 import seassonStyles from './seasson.scss';
 import downArrowIcon from 'content/icons/down-arrow.svg'
 
-const Seasson = function() {
+const Seasson = function({ state, props, toogle }) {
     return(
         <div className={ seassonStyles.seasson }>
             <div className={ seassonStyles.seassonInfoContainer }>
-                <h3>Seasson { this.props.seasson.seasson }</h3>
-                <div onClick={ this.toogle.bind(this) }>
-                    <Icon svgIcon={ downArrowIcon } className={ this.state.isOpen ? seassonStyles.arrowDown : seassonStyles.arrowUp } />
+                <h3>Seasson { props.seasson.seasson }</h3>
+                <div onClick={ toogle.bind(this) }>
+                    <Icon svgIcon={ downArrowIcon } className={ state.isOpen ? seassonStyles.arrowDown : seassonStyles.arrowUp } />
                 </div>
             </div>
             <div>
-                { this.state.isOpen ? this.props.seasson.episodes.map(episode => 
+                { state.isOpen ? props.seasson.episodes.map(episode => 
                     <Episode 
                         key={ episode.title } 
                         episode={ episode } 
