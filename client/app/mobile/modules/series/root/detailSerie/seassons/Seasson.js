@@ -9,34 +9,31 @@ import Episode from './seasson/Episode';
 import upIcon from 'content/icons/up-arrow.png';
 import downIcon from 'content/icons/down-arrow.png';
 
-const Seasson = function({ state, props, toogle }) {
-    return(
-        <TouchableWithoutFeedback 
-            title='toggle' 
-            onPress={ toogle.bind(this) }
-        >
-            <View style={ styles.seasson }>
-                <View style={ styles.seassonRow }>
-                    <Text style={ styles.seassonText }>Seasson { props.seasson.seasson }</Text>
-                    <View>
-                        <Image 
-                            source={ state.isOpen ? upIcon : downIcon }
-                            style={ styles.seassonImage }
-                        />
-                    </View>
-                </View>
+const Seasson = ({ state, props: { seasson }, toogle }) =>
+    <TouchableWithoutFeedback 
+        title='toggle' 
+        onPress={ toogle }
+    >
+        <View style={ styles.seasson }>
+            <View style={ styles.seassonRow }>
+                <Text style={ styles.seassonText }>Seasson { seasson.seasson }</Text>
                 <View>
-                    { state.isOpen ? props.seasson.episodes.map(episode => 
-                        <Episode 
-                            key={ episode.title } 
-                            episode={ episode } 
-                        />) : null
-                    }
+                    <Image 
+                        source={ state.isOpen ? upIcon : downIcon }
+                        style={ styles.seassonImage }
+                    />
                 </View>
             </View>
-        </TouchableWithoutFeedback>
-    );
-}
+            <View>
+                { state.isOpen ? seasson.episodes.map(episode => 
+                    <Episode 
+                        key={ episode.title } 
+                        episode={ episode } 
+                    />) : null
+                }
+            </View>
+        </View>
+    </TouchableWithoutFeedback>
 
 export default Seasson;
 

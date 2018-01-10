@@ -13,7 +13,7 @@ class MasterSeriesSF extends Component {
     render() {
         return (
             <CustomFragment>
-                { this.props.render.bind(this)(this.props) }
+                { this.props.render(this) }
             </CustomFragment>
         )
     }

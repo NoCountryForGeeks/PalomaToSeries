@@ -4,7 +4,7 @@ import Actors from './detailSerie/actors';
 import Seassons from './detailSerie/Seassons';
 import detailSerieStyles from './detailSerie.scss';
 
-const DetailSerie = ({ serie }) =>
+const DetailSerie = ({ props: { serie } }) =>
     <div className={ detailSerieStyles.detailSerie }>
         <div className={ detailSerieStyles.detailSerieContainner }>
             <Info serie={ serie } />

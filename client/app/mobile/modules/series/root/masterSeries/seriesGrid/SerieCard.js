@@ -2,8 +2,7 @@ import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import { Link } from 'mobileSharedComponents';
 
-const SerieCard = function({ serie }) {
-    return(
+const SerieCard = ({ serie }) =>
         <Link to={{ routeName: 'Detail', params: { id: serie.id } }}>
             <View style={ styles.serieCard }>
                 <Image 
@@ -26,9 +25,7 @@ const SerieCard = function({ serie }) {
                     </View>
                 </View>
             </View>        
-        </Link>      
-    )     
-}
+        </Link>
 
 export default SerieCard;
 

@@ -9,13 +9,19 @@ class SeassonSF extends Component {
     }
 
     toogle() {
-        this.setState({ ...this.state, isOpen: !this.state.isOpen});
+        this.setState({ ...this.state, isOpen: !this.state.isOpen });
     }
 
-    render() {
+    render() {   
+        const props = { 
+            toogle: this.toogle.bind(this),
+            state: this.state,
+            props: this.props
+        }
+        
         return (
             <CustomFragment>
-                { this.props.render.bind(this)(this) }
+                { this.props.render(props) }
             </CustomFragment>
         )
     }
