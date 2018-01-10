@@ -7,33 +7,31 @@ import { View,
 } from 'react-native'; 
 import searchIcon from 'content/icons/magnifier.png';
 
-const SeriesSearch = function({ state }) { 
-    return(
-        <View style={ styles.searchBar }>
-            <View style={ styles.searchBarBorder }>
-                <TextInput 
-                    style={ styles.searchBarTextInput }
-                    placeholder='Search...'
-                    value={ state.search }
-                    underlineColorAndroid='transparent'
-                    onChangeText={ value => this.searchHelpSeries.bind(this)(value) }
-                />
-                <TouchableWithoutFeedback 
-                    style={ styles.searchBarSubmitButton }
-                    onPress={ this.searchSeries.bind(this) }
-                    title='Search'
-                >
-                    <View>
-                        <Image 
-                            source={ searchIcon }
-                            style={ styles.searchBarButtonIcon }
-                        />
-                    </View>
-                </TouchableWithoutFeedback>
-            </View>
+const SeriesSearch = ({ state, updateSearchValue, searchSeries }) =>
+    <View style={ styles.searchBar }>
+        <View style={ styles.searchBarBorder }>
+            <TextInput 
+                style={ styles.searchBarTextInput }
+                placeholder='Search...'
+                value={ state.search }
+                underlineColorAndroid='transparent'
+                onChangeText={ value => updateSearchValue(value) }
+            />
+            <TouchableWithoutFeedback 
+                style={ styles.searchBarSubmitButton }
+                onPress={ searchSeries }
+                title='Search'
+            >
+                <View>
+                    <Image 
+                        source={ searchIcon }
+                        style={ styles.searchBarButtonIcon }
+                    />
+                </View>
+            </TouchableWithoutFeedback>
         </View>
-    )
-}
+    </View>
+
 export default SeriesSearch;
 
 const styles = StyleSheet.create({

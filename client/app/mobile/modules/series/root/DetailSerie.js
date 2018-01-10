@@ -4,7 +4,7 @@ import Info from './detailSerie/Info';
 import Seassons from './detailSerie/Seassons';
 import Actors from './detailSerie/Actors';
 
-const DetailSerie = ({ serie }) => 
+const DetailSerie = ({ props: { serie } }) => 
     <ScrollView style={ styles.detailPage }>
         <Info serie={ serie } />
         <Seassons seassons={ serie.seassons } />
