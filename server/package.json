@@ -5,5 +5,24 @@
   "main": "index.js",
   "repository": "https://github.com/NoCountryForGeeks/PalomaToSeries",
   "author": "franmolmedo ivanrodricalleja",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./src/index.js --exec babel-node",
+    "seed": "babel-node ./src/database/seed/index.js",
+    "build": "rimraf ./build && babel ./src --out-dir ./build/src && babel ./config --out-dir ./build/config"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2017-node7": "^0.5.2",
+    "eslint": "^4.15.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-smells": "^1.0.1",
+    "nodemon": "^1.14.11"
+  }
 }
