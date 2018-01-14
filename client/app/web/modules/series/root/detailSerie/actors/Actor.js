@@ -3,10 +3,7 @@ import actorStyles from './actor.scss';
 import Icon from 'webSharedComponents/Icon';
 import exchageIcon from 'content/icons/exchange.svg';
 
-const Actor = ({ actor: { person, character} }) => { 
-    console.log('person', person)
-    console.log('character', character)
-    return (
+const Actor = ({ actor: { person, character} }) => 
         <div className={ actorStyles.actor }>
             <div>
                 <img src={ person.image ? person.image : null } alt={ person.name } />
@@ -17,7 +14,6 @@ const Actor = ({ actor: { person, character} }) => {
                 <img src={ character.image ? character.image : null } alt={ character.name } />
                 <span>{ character.name }</span>
             </div>
-        </div>)
-}
+        </div>
 
 export default Actor;
