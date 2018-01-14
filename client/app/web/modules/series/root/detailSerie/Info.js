@@ -4,11 +4,11 @@ import infoStyles from './info.scss';
 const Info = ({ serie }) =>
     <div className={ infoStyles.info }>
         <div>
-            <img src={ serie.image.medium } alt={ serie.title }/>
+            <img src={ serie.image ? serie.image.medium : null } alt={ serie.title }/>
         </div>
         <div className={ infoStyles.detail }>
-            <h3>{ serie.title }</h3>
-            <span>{ serie.language }</span>
+            <h1>{ serie.title }</h1>
+            <span>Language: </span><span>{ serie.language }</span>
         </div>
     </div>
 

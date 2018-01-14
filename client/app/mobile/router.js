@@ -14,6 +14,12 @@ const Router = StackNavigator({
         path: 'series/:id',
         screen: DetailSerieContainer
     }
+},
+{
+    headerMode: 'screen', 
+    cardStyle: {
+        backgroundColor: 'transparent'
+    }
 });
 
 export default Router;

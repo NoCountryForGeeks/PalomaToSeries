@@ -1,19 +1,20 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import { CustomFragment } from 'globalSharedComponents';
 import { getSerieRequest } from 'state/series/actions/getSerie';
 
 class DetailSerieSF extends Component {
    componentDidMount() {
         const { getSerie, serieId } = this.props;
         getSerie(serieId);
-        console.log('getSerie', serieId);
     }
 
     render() {
         return (
-            <Fragment>
-                { this.props.render.bind(this)(this.props) }
-            </Fragment>
+            <CustomFragment>
+                { this.props.render(this) }
+            </CustomFragment>
         )
     }
 }

@@ -1,16 +1,31 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, 
+    Text, 
+    TouchableWithoutFeedback, 
+    StyleSheet, 
+    Image 
+} from 'react-native';
 import Episode from './seasson/Episode';
+import upIcon from 'content/icons/up-arrow.png';
+import downIcon from 'content/icons/down-arrow.png';
 
-const Seasson = function() {
-    return(
-        <View>
-            <Text>Seasson { this.props.seasson.seasson }</Text>
-            <Button title='toggle' onPress={ this.toogle.bind(this) }>
-                Toggle
-            </Button>
+const Seasson = ({ state, props: { seasson }, toogle }) =>
+    <TouchableWithoutFeedback 
+        title='toggle' 
+        onPress={ toogle }
+    >
+        <View style={ styles.seasson }>
+            <View style={ styles.seassonRow }>
+                <Text style={ styles.seassonText }>Seasson { seasson.seasson }</Text>
+                <View>
+                    <Image 
+                        source={ state.isOpen ? upIcon : downIcon }
+                        style={ styles.seassonImage }
+                    />
+                </View>
+            </View>
             <View>
-                { this.state.isOpen ? this.props.seasson.episodes.map(episode => 
+                { state.isOpen ? seasson.episodes.map(episode => 
                     <Episode 
                         key={ episode.title } 
                         episode={ episode } 
@@ -18,7 +33,30 @@ const Seasson = function() {
                 }
             </View>
         </View>
-    );
-}
+    </TouchableWithoutFeedback>
 
 export default Seasson;
+
+const styles = StyleSheet.create({
+    seasson: {
+        marginBottom: 10,
+    },
+    seassonRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        paddingVertical: 15
+    },
+    seassonText: {
+        flex: 1,
+        marginRight: 20,
+        color: '#828080',
+        fontSize: 15
+    },
+    seassonImage: {
+        width: 30, 
+        height: 30,
+    }
+});

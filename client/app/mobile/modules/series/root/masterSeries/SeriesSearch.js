@@ -2,38 +2,63 @@ import React from 'react';
 import { View, 
     TextInput, 
     TouchableWithoutFeedback, 
-    Text,
-    StyleSheet
+    StyleSheet,
+    Image
 } from 'react-native'; 
+import searchIcon from 'content/icons/magnifier.png';
 
-const SeriesSearch = function({ state }) { 
-    return(
-        <View style={ styles.container }>
+const SeriesSearch = ({ state, updateSearchValue, searchSeries }) =>
+    <View style={ styles.searchBar }>
+        <View style={ styles.searchBarBorder }>
             <TextInput 
+                style={ styles.searchBarTextInput }
                 placeholder='Search...'
                 value={ state.search }
-                onChangeText={ value => this.searchHelpSeries.bind(this)(value) }
+                underlineColorAndroid='transparent'
+                onChangeText={ value => updateSearchValue(value) }
             />
             <TouchableWithoutFeedback 
-                onPress={ this.searchSeries.bind(this) }
+                style={ styles.searchBarSubmitButton }
+                onPress={ searchSeries }
                 title='Search'
             >
-                <Text>Search</Text>
+                <View>
+                    <Image 
+                        source={ searchIcon }
+                        style={ styles.searchBarButtonIcon }
+                    />
+                </View>
             </TouchableWithoutFeedback>
         </View>
-    )
-}
+    </View>
+
 export default SeriesSearch;
 
 const styles = StyleSheet.create({
-    container: {
+    searchBar: {
+        backgroundColor: '#242424',
+        paddingVertical: 10,
+        paddingHorizontal: 10
+    },
+    searchBarBorder: {
         flexDirection: 'row',
-        backgroundColor: 'green'
+        borderRadius: 20,
+        borderWidth: 2,
+        borderColor: 'rgb(211, 211, 211)',
+        alignItems: 'center',
+        paddingHorizontal: 20
     },
-    textInput: {
-        flex: 4
+    searchBarTextInput: {
+        flex: 1,
+        fontSize: 15,
+        color: 'rgb(211, 211, 211)',
+        marginRight: 20
     },
-    button: {
-        flex: 2
+    searchBarSubmitButton: {
+        flex: 1
+    },
+    searchBarButtonIcon: {
+        width: 20, 
+        height: 20,
     }
 });

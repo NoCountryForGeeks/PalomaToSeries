@@ -1,10 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import SeassonSF from 'modules/series/root/detailSerieFS/SeassonSF';
 import Seasson from './seassons/Seasson';
 
 const Seassons = ({ seassons }) => 
-    <View>
+    <View style={ styles.seassonsContainer }>
         { seassons.map(seasson => 
             <SeassonSF 
                 render={ Seasson } 
@@ -15,3 +15,9 @@ const Seassons = ({ seassons }) =>
     </View>
 
 export default Seassons;
+
+const styles = StyleSheet.create({
+    seassonsContainer: {
+        marginBottom: 10,
+    }
+});

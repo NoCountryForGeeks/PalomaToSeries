@@ -1,0 +1,1 @@
+export { CustomFragment } from './CustomFragment';
