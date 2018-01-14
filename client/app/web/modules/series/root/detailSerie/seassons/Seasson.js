@@ -7,7 +7,7 @@ import downArrowIcon from 'content/icons/down-arrow.svg'
 const Seasson = ({ state, props: { seasson }, toogle }) => 
     <div className={ seassonStyles.seasson }>
         <div className={ seassonStyles.seassonInfoContainer }>
-            <h3>Seasson { seasson.seasson }</h3>
+            <span>Seasson { seasson.seasson }</span>
             <div onClick={ toogle }>
                 <Icon svgIcon={ downArrowIcon } className={ state.isOpen ? seassonStyles.arrowDown : seassonStyles.arrowUp } />
             </div>

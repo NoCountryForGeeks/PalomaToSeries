@@ -44,6 +44,7 @@ const initialConfig = {
             app:PATHS.appFolder
         },
         output: {
+            publicPath: '/',
             chunkFilename: '[name].[chunkhash:8].js',
             filename: '[name].[chunkhash:8].js'
         },
@@ -74,7 +75,7 @@ const commonConfiguration = merge([
     lintJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     lintCss({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ]  }),
     loadJs({ exclude: [ PATHS.node_modules, PATHS.mobileFolder ], plugins: ['transform-class-properties','transform-runtime'] }),
-    svgSpriteLoader({ spriteFilename: './content/svg/sprite.svg' }),
+    svgSpriteLoader({ spriteFilename: 'content/svg/sprite.svg' }),
     loadFonts({
         options: {
             name: '[name].[hash:8].[ext]',
@@ -119,7 +120,7 @@ const productionConfiguration = merge([
             name: '[name].[hash:8].[ext]',
             outputPath: 'content/images/'
         },
-        include:  PATHS.appFolder
+        include:  PATHS.imageFolder
     }),
     generateSourceMaps({ type: 'source-map' }),
     fileRevision(),

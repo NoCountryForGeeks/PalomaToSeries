@@ -1,15 +1,11 @@
-import { /*call, */put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { getSerieRequest, getSerieDone, getSerieError } from '../actions/getSerie';
-//import { getSerieById } from 'services';
-import fakeSeries from '../../../../serie.json';
+import { getSerieById } from 'services'
 
 
-function *getSerieAction(/*action*/) {
+function *getSerieAction(action) {
     try {
-        //const serie= yield call(getSerieById, action.payload);
-        const serie = {
-            data: fakeSeries
-        } 
+        const serie= yield call(getSerieById, action.payload); 
         yield put(getSerieDone(serie))
     } catch (error) {
         yield put(getSerieError(error))

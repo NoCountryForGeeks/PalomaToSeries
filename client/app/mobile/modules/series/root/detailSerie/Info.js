@@ -6,7 +6,7 @@ const Info = ({ serie }) =>
         <Image 
             style={ styles.serieImage }
             source={{
-                uri: serie.image.medium,
+                uri: serie.image ? serie.image.medium : null,
                 cache: 'only-if-cached',
             }}
         />

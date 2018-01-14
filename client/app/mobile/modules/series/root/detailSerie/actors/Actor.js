@@ -8,7 +8,7 @@ const Actor = ({ actor: { person, character} }) =>
                 <Image 
                     style={ styles.actorImage }
                     source={{
-                        uri: person.image.medium,
+                        uri: person.image ? person.image.medium : null,
                         cache: 'only-if-cached',
                     }}
                 />
@@ -24,7 +24,7 @@ const Actor = ({ actor: { person, character} }) =>
                 <Image 
                     style={ styles.actorImage }
                     source={{
-                        uri: character.image.medium,
+                        uri: character.image ? character.image.medium : null,
                         cache: 'only-if-cached',
                     }}
                 />
